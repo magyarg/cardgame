@@ -228,6 +228,11 @@ app.controller("CardController", function($scope, $rootScope, $timeout, $locatio
 		$location.path('/scores');
 	}
 
+	$scope.clearScores = function() {
+		$window.localStorage.clear();
+		alert('Scores was deleted!');
+	}
+
 	/**
 	 * Util procedures
 	 * ================================================================== */
