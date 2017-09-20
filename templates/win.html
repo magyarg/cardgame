@@ -1,4 +1,4 @@
-<h2 class="text-center">Congrats! You won from {{ win.tries }}!</h2>
+<h2 class="text-center">Congrats! You won from {{ win.tries | number: 0 }}!</h2>
 <h4 class="text-center">Your score is {{ win.score }} points</h4>
 
 <form onSumbit="setPlayerName(player)">

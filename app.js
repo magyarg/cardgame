@@ -26,13 +26,21 @@ var app = angular.module('card-game', [
 
 }).run(['$rootScope', '$window', function($rootScope, $window) {
 
+	var localStorageState = $window.localStorage.getItem('scores');
+
 	$rootScope.win = {};
 	$rootScope.win.tries 	= 0;
 	$rootScope.win.score 	= 0;
 	$rootScope.win.deckSize = 6;
 	$rootScope.win.name 	= '';
 	$rootScope.deckSize 	= 6;
-	$rootScope.scores 		= JSON.parse($window.localStorage.getItem('scores'));
+
+	if (localStorageState == null) {
+		$rootScope.scores 		= {};
+	} else {
+		$rootScope.scores 		= JSON.parse(localStorageState);
+	}
+
 }]);
 
 app.filter('orderObjectBy', function() {

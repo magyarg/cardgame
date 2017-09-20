@@ -212,10 +212,11 @@ app.controller("CardController", function($scope, $rootScope, $timeout, $locatio
 	 */
 	$scope.saveScores = function(player) {		
 		$rootScope.win.name = player;
-		var scores = $window.localStorage.getItem('scores');
+		var scores = [];
+		scores = $window.localStorage.getItem('scores');
 		if (scores == null) {
 			scores = [];
-			$window.localStorage.setItem('scores', JSON.stringify($rootScope.win));
+			$window.localStorage.setItem('scores', JSON.stringify([$rootScope.win]));
 		} else {
 			scores = JSON.parse(scores);
 			scores.push($rootScope.win);
