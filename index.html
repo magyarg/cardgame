@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Supercharge.io - Card Game</title>
+
+	<!-- Bootstrap and custom stylesheet -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/application.css">
+</head>
+<body ng-app="card-game" ng-controller="CardController">
+
+<!-- Main game board -->
+<div id='game-board'>
+
+	<div class="container card-container" ng-view></div>
+
+</div>
+
+<!-- Javascript dependencies -->
+<script src="assets/js/angular.js"></script>
+<script src="assets/js/angularAnimate.js"></script>
+<script src="assets/js/angularRoute.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+
+<!-- Angular Controllers -->
+<script src="app.js"></script>
+<script src="controllers/CardController.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<h1>Hall of fame</h1>
+<table class="table">
+	<thead>
+		<tr>
+			<td>Name</td>
+			<td>Deck Size</td>
+			<td>Tries</td>
+			<td>Scores</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="item in scores | orderBy:'-score'">
+			<td>{{ item.name }}</td>
+			<td>{{ item.deckSize }}</td>
+			<td>{{ item.tries }}</td>
+			<td>{{ item.score }}</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="control-block">
+	<button class="btn btn-block btn-default" ng-click="reMatch()">Reset game</button>
+</div>
